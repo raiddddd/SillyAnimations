@@ -1,0 +1,213 @@
+.parent {
+  background-color: hsla(200, 100%, 20%);
+  height: 400px;
+  width: 400px;
+}
+
+.child {
+  background-color: red;
+  height: 50%;
+  width: 50%;
+  animation: left-to-right 1s ease-in forwards infinite alternate;
+}
+
+.parent:hover .child {
+  animation-play-state: paused;
+}
+
+@keyframes left-to-right {
+  
+  0% {
+    background-color: red;
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    background-color: blue;
+  }
+
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  
+  100% {
+    background-color: green;
+    transform: translateX(100%);
+  }
+
+}
+
+.square-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  margin: 20px auto;
+  background-color: black;
+  color: black;
+}
+
+.changing-color-square {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 200px;
+}
+
+.square-parent:hover .changing-color-square {
+  animation: crazy-colorfull-square 8s linear forwards infinite;
+}
+
+@keyframes crazy-colorfull-square {
+
+  0% {
+    color: red;
+    background-color: blue;
+  }
+
+  10% {
+    color: blue;
+    background-color:moccasin;
+  }
+
+  20% {
+    color:moccasin;
+    background-color: yellow;
+  }
+
+  30% {
+    color: yellow;
+    background-color: green;
+  }
+
+  40% {
+    color: green;
+    background-color:brown;
+  }
+
+  50% {
+    color: brown;
+    background-color:crimson;
+  }
+
+  60% {
+    color: crimson;
+    background-color:cyan;
+  }
+
+  70% {
+    color: cyan;
+    background-color:darkblue;
+  }
+
+  80% {
+    color: darkblue;
+    background-color:gold;
+  }
+
+  90% {
+    color: gold;
+    background-color: indigo;
+  }
+
+  100% {
+    color:indigo;
+    background-color: red;
+  }
+}
+
+
+.circle-parent {
+  width: 500px;
+  height: 500px;
+  background-color: moccasin;
+  border: 2px solid navy;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: crimson;
+  text-align: center;
+
+}
+
+.span-circle {
+  display: block;
+  color: yellow;
+  padding-top: 40px;
+}
+
+
+@keyframes crazy-moving-circle {
+
+  0% {
+    transform: translate(0px, 0px);
+  }
+  4% {
+    transform: translateX(30px) translateY(60px);
+    background-color: blue;
+  }
+  6% {
+    transform: translate(250px, 2px);
+  }
+  11% {
+    transform: translate(40px, 350px);
+  }
+  23% {
+    transform: translate(340px, 230px);
+  }
+  29% {
+    transform: translate(178px, 56px);
+  }
+  38% {
+    transform: translate(91px, 139px);
+  }
+  45% {
+    transform: translate(59px, 284px);
+  }
+  51% {
+    transform: translate(240px, 340px);
+    background-color:lime;
+  }
+  60% {
+    transform: translate(200px, 240px);
+  }
+  75% {
+    transform: translate(20px, 20px);
+  }
+  82% {
+    transform: translate(290px, 295px);
+  }
+  91% {
+    transform: translate(340px, 340px);
+  }
+  100% {
+    transform: translateX(100px) translateY(0px);
+  }
+
+}
+
+
+.pointer-parent {
+  width: 500px;
+  height: 500px;
+  background-color:bisque;
+  margin: 20px auto;
+}
+
+.pointer-follow {
+  width: 30px;
+  height: 30px;
+  background-color: navy;
+  pointer-events: none;
+}
